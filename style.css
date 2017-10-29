@@ -1,0 +1,15 @@
+body, html {
+  background: url(background.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#weatherContainer {
+  margin-top: 25vh;
+}
+
+#weatherDisplay {
+  margin-top: 5vh;
+}
