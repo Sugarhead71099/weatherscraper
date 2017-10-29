@@ -24,23 +24,7 @@
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-		<style>
-			body, html {
-			  background: url(background.jpeg) no-repeat center center fixed;
-			  -webkit-background-size: cover;
-			  -moz-background-size: cover;
-			  -o-background-size: cover;
-			  background-size: cover;
-			}
-			
-			#weatherContainer {
-				margin-top: 25vh;
-			}
-			
-			#weatherDisplay {
-				margin-top: 5vh;
-			}
-		</style>
+		<link rel="stylesheet" href="style.css">
 		<title>Weather Scraper</title>
 	</head>
 	<body>
