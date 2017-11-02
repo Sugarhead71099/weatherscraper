@@ -56,4 +56,4 @@
 
 		</div>
 
-<?php include_once('Includes/footer.php');
+<?php include_once('Includes/footer.php'); ?>
