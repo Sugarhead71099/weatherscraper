@@ -23,35 +23,16 @@
 		// }
 	}
 
+	include_once('Includes/header.php');
+
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-		<style>
-			body, html {
-			  background: url(background.jpeg) no-repeat center center fixed;
-			  -webkit-background-size: cover;
-			  -moz-background-size: cover;
-			  -o-background-size: cover;
-			  background-size: cover;
-			}
-			
-			#weatherContainer {
-				margin-top: 25vh;
-			}
-			
-			#weatherDisplay {
-				margin-top: 5vh;
-			}
-		</style>
-		<title>Weather Scraper</title>
-	</head>
-	<body>
+    	<div id="map"></div>
+
+		<div class="container text-center col-lg-5" id="weatherToggleContainer">
+    		<button type="button" class="btn btn-info" id="weatherInfoDisplayToggle">Toggle Weather Display</button>
+		</div>
+
 		<div id="weatherContainer" class="container text-center col-lg-5">
 
 			<h1>What's The Weather?</h1>
@@ -59,7 +40,7 @@
 			<form method="GET">
 				<fieldset class="form-group">
 					<label for="city">Enter a name of a city</label>
-					<input type="text" id="city" class="form-control" name="city" aria-describedby="cityInput" placeholder="e.g. London, Tokyo, Chicago, etc..." value="<?php if(sizeof($_GET) > 0) $_GET['city']; ?>">
+					<input type="text" id="city" class="form-control" name="city" aria-describedby="cityInput" placeholder="<?php if(count($_GET)) echo ucfirst($_GET['city']); else echo 'e.g. London, Tokyo, Chicago, etc...'; ?>" value="">
 				</fieldset>
 				<button type="submit" class="btn btn-primary">Submit</button>
 			</form>
@@ -75,8 +56,4 @@
 
 		</div>
 
-		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-	</body>
-</html>
+<?php include_once('Includes/footer.php');
